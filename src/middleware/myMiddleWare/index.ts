@@ -31,5 +31,5 @@ export const cbMiddleware = (options: optionType) => {
 /* 错误中间件 */
 export const errorMiddleware = (err: Error, _req: Request, res: Response, _next: NextFunction) => {
   console.log(err.stack);
-  res.status(500).send("Something broke")
+  res.status(500).send("Something broke") // 捕获到express使用next传递的错误并设置返回
 }

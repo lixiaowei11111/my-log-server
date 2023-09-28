@@ -11,5 +11,5 @@ userRoutes.get('/login', userController.login)// login方法相当于一个route
 userRoutes.all("/sso", userController.redirect)
 userRoutes.get("/synchErrorHandle", userController.synchErrorHandle)// 同步异常会被express捕获
 userRoutes.get("/asynchErrorHandle", userController.asynchErrorHnadle)// 异步异常需要通过next来传递//express 5可以自动捕获
-
+userRoutes.get("/promsieErrorHnadle", userController.promiseResolveHandle)// 异步错误需要通过next来传递
 export default userRoutes

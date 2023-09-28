@@ -1,7 +1,7 @@
 import express, { type Express } from 'express'
 
 /* middleware */
-import { myLogger, requestTime, cbMiddleware } from './middleware/myMiddleWare'
+import { myLogger, requestTime, cbMiddleware, errorMiddleware } from './middleware/myMiddleWare'
 
 import rootRoutes from './routes'
 
@@ -13,6 +13,7 @@ app.use(requestTime)// 中间件 有 应用级中间件, 路由级中间件,错�
 app.use("/api/", rootRoutes)
 app.use(myLogger)
 app.use(cbMiddleware({ foo: "xxxx" }))// 中间件使用回调函数的形式来携带参数
+app.use(errorMiddleware)
 
 
 const main = async (): Promise<void> => {

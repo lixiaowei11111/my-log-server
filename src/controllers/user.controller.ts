@@ -30,10 +30,11 @@ class UserController extends BaseController {
     })
   }
 
-  public promiseEjectHandle () {
+  public promiseResolveHandle (_req: Request, _res: Response, next: NextFunction) {
     Promise.resolve().then(() => {
       throw new Error("Promsie then inside throw error ")
-    })
+    }).catch((err) => { next(err) })
+    // 如果不适用catch捕获,会导致程序中断,不使用next传递,会导致express 捕获不到该错误
   }
 }
 
