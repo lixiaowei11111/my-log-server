@@ -2,4 +2,4 @@
 import dotenv from 'dotenv'
 import path from 'path'
 
-const config = dotenv.config({ path: path.resolve(__dirname, '/env/.env.' + process.env.NODE_ENV) })
+export const config = dotenv.config({ path: path.resolve(__dirname, '/env/.env.' + process.env.NODE_ENV) })

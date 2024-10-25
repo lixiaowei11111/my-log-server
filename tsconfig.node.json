@@ -33,6 +33,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "useUnknownInCatchVariables": true,
-    "incremental": false
+    "incremental": false,
+    "outDir": "./dist"
   }
 }
