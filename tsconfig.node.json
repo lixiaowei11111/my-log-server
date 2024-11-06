@@ -13,7 +13,7 @@
     "esModuleInterop": true,
     // Allow javascript files to be compiled.
     // Egg compile to in place, will throw can not overwrite js file
-    "allowJs": false,
+    "allowJs": false,//编译时是否允许编译js文件
     "pretty": true,
     "noEmitOnError": false,
     "noUnusedLocals": true,
@@ -27,7 +27,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "inlineSourceMap": true,
-    "declaration": true,
+    "declaration": false, //declaration 用来指定编译时是否生成对应.d.ts类型声明文件,不能和allowJs同时设置为true
     "resolveJsonModule": true,
     // Enables experimental support for ES7 decorators.
     "experimentalDecorators": true,

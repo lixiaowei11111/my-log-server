@@ -12,3 +12,7 @@
 3. `Sequelize`
    1. supprot TypeScript;
    2. github start :28.4k;fork 4.2k;commits:10324;issue:793 open,9361 cloesd;
+
+
+`tsconfig-paths`
++ `ts-node`[不支持识别路径alias](https://juejin.cn/post/6963800542615175182),需要配合`tsconfig-paths`来解决该问题

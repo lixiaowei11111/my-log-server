@@ -3,7 +3,7 @@ import { Router } from 'express'
 import userController from '../controllers/user.controller'
 
 
-const userRoutes = Router()
+const userRoutes:Router = Router()
 
 // router.param 为路由参数添加特定的回调函数。这些回调函数可能会在路由路径中的参数匹配时被调用。
 userRoutes.param('userId',userController.getUserInfoById)//匹配到 /person/:userId 时会调用该callback
